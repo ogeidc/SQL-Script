@@ -17,8 +17,18 @@ primary key (id)
 
 
 );
--- mostrando a tabela
+-- mostrando a tabela inteira
 SELECT * FROM tb_produtos;
+-- mostrando APENAS produtos com o preço abaixo de 50 reais
+SELECT * FROM tb_produtos
+WHERE preco < '50.00';
+-- mostrando APENAS produtos com o preço acima de 50 reais
+SELECT * FROM tb_produtos
+WHERE preco > '50.00';
+-- atualizando dados da tabela
+UPDATE tb_produtos
+SET produto = 'Cantil de Alumínio', origem='SP'
+WHERE id = 9;
 -- inserindo dados dentro da tabela
 INSERT INTO tb_produtos (produto, peso, preco, origem, validade) VALUES ("Pederneira", 0.20, 36.90, "China", "Dois anos"); 
 INSERT INTO tb_produtos (produto, peso, preco, origem, validade) VALUES ("Bússola Profissional", 0.10, 17.50, "Taiwan", "Dois anos");
