@@ -32,12 +32,22 @@ INSERT INTO tb_classes(nome_classe, descricao) VALUES ("Humano", "A raça Homem 
 INSERT INTO tb_classes(nome_classe, descricao) VALUES ("Mago", "Os magos, também chamado de Istari, são divididos conforme suas cores.");
 INSERT INTO tb_classes(nome_classe, descricao) VALUES("Anão", "Anões são uma raça de seres que habitam Arda, a Terra pré-histórica que inclui o continente da Terra Média. Os anões são geralmente ferreiros ou mineradores.");
 INSERT INTO tb_classes(nome_classe, descricao) VALUES("Elfo","Os Elfos são descritos como altos e belos, parecidos com os Valar (espécie de anjos), só que menores em estatura e poder, e são imortais, pelos menos enquanto o Mundo, chamado Arda, existir.");
+INSERT INTO tb_classes(nome_classe, descricao) VALUES("Orc", "estúpidos, são retratados como seres infelizes, que odeiam todos, incluindo a si mesmos e aos seus mestres, que servem por medo. São incapazes de fazer coisas belas como os Elfos, mas conseguem criar instrumentos para ferir e destruir.");
+
 -- inserindo dados na tabela personagem com seus atributos
 INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Frodo", "Bolseiro", "anel", 250, 300, 1);
 INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Aragorn","Filho de Arathorn", "espada", 500, 100, 3);
-INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Gandalf", "O cinzento","cajado", 330, 500, 2);
-INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Gimli", "Filho de Glóin","machado", 700, 100, 4);
-INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES ("Légolas", "Príncipe do Reino da Floresta", "arco e flecha", 300, 400, 5);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Gandalf", "O cinzento", "cajado", 330, 700, 2);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Gimli", "Filho de Glóin", "machado", 700, 100, 4);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Légolas", "Príncipe do Reino da Floresta", "arco e flecha", 300, 400, 5);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Bilbo", "Bolseiro", "anel", 300, 300, 1);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Galadriel", "Filha de Finarfin", "harpa", 400, 800, 5);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Boromir", "Filho de Denethor", "punhal", 550, 50, 3);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Thorin","Escudo-de-Carvalho", "martelo", 750, 75, 4);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Saruman","O Branco", "cajado", 300, 750, 2);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Leomorn","Hawklight", "punhal", 250, 350, 6);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Sauron", "O Necromante", "anel", 700, 400, 2);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Smeagól", "Gollum","anel", 220, 190, 1);
 -- comando para mostrar tabela personagens
 SELECT * FROM tb_personagens;
 -- comando para mostrar tabela classes
@@ -57,3 +67,18 @@ ON tb_classes.id = tb_personagens.classe_id;
 -- unindo apenas os dados dos elfos
 SELECT tb_personagens.nome FROM tb_personagens INNER JOIN tb_classes
 ON tb_classes.id = tb_personagens.classe_id and tb_classes.nome_classe = "Elfo";
+-- unindo apenas os dados dos humanos
+SELECT tb_personagens.nome FROM tb_personagens INNER JOIN tb_classes
+ON tb_classes.id = tb_personagens.classe_id and tb_classes.nome_classe = "Humano";
+-- unindo apenas os dados dos magos
+SELECT tb_personagens.nome FROM tb_personagens INNER JOIN tb_classes
+ON tb_classes.id = tb_personagens.classe_id and tb_classes.nome_classe = "Mago";
+-- unindo apenas os dados dos anões
+SELECT tb_personagens.nome FROM tb_personagens INNER JOIN tb_classes
+ON tb_classes.id = tb_personagens.classe_id and tb_classes.nome_classe = "Anão";
+-- unindo apenas os dados dos hobbits
+SELECT tb_personagens.nome FROM tb_personagens INNER JOIN tb_classes
+ON tb_classes.id = tb_personagens.classe_id and tb_classes.nome_classe = "Hobbit";
+-- unindo apenas os dados dos Orcs 
+SELECT tb_personagens.nome FROM tb_personagens INNER JOIN tb_classes
+ON tb_classes.id = tb_personagens.classe_id and tb_classes.nome_classe = "Orc";
