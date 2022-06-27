@@ -48,6 +48,7 @@ INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("S
 INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Leomorn","Hawklight", "punhal", 250, 350, 6);
 INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Sauron", "O Necromante", "anel", 700, 400, 2);
 INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Smeagól", "Gollum","anel", 220, 190, 1);
+INSERT INTO tb_personagens(nome, sobrenome, item, hp, mana, classe_id) VALUES("Radagast", "O Castanho", "cajado", 400, 800, 2);
 -- comando para mostrar tabela personagens
 SELECT * FROM tb_personagens;
 -- comando para mostrar tabela classes

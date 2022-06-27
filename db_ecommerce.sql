@@ -1,5 +1,4 @@
--- este é o bando de dados da loja de ecommerce que vende produtos de sobrevivência
-
+-- este é o banco de dados da loja de ecommerce que vende produtos de sobrevivência
 CREATE DATABASE db_ecommerce;
 -- criando um bando de dados 
 USE db_ecommerce;
